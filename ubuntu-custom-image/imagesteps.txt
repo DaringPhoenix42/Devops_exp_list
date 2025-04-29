@@ -1,0 +1,54 @@
+📁 Step 1: Create a Project Directory
+
+mkdir ubuntu-custom-image
+cd ubuntu-custom-image
+
+🐳 Step 2: Pull the Official Ubuntu Image
+
+docker pull ubuntu:latest
+
+✅ This command pulls the official Ubuntu image from Docker Hub.
+📝 Step 3: Create a File to Include
+
+Create a file named myinfo.txt:
+
+echo "This is a custom image based on Ubuntu by Dhruv Tiwari." > myinfo.txt
+
+📄 Step 4: Create the Dockerfile
+
+In the same directory, create a file named Dockerfile:
+
+# Start from the official Ubuntu base image
+FROM ubuntu:latest
+
+# Copy the local file into the image
+COPY myinfo.txt /myinfo.txt
+
+# Default command to run when container starts
+CMD ["cat", "/myinfo.txt"]
+
+🏗️ Step 5: Build the Docker Image
+
+docker build -t daringdhruvtiwari/ubuntu-custom:v1 .
+
+✅ This creates an image with your custom file.
+▶️ Step 6: Run and Test the Image
+
+docker run daringdhruvtiwari/ubuntu-custom:v1
+
+Expected Output:
+
+This is a custom image based on Ubuntu by Dhruv Tiwari.
+
+🔐 Step 7: Log in to Docker Hub
+
+docker login
+
+Enter your DockerHub username and password.
+⬆️ Step 8: Push the Image to Docker Hub
+
+docker push daringdhruvtiwari/ubuntu-custom:v1
+
+✅ Your image is now publicly available at:
+
+https://hub.docker.com/r/daringdhruvtiwari/ubuntu-custom
