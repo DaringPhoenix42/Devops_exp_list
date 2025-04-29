@@ -15,3 +15,26 @@ Windows subsystem for linux on that
 C:\Users\hp>wsl –status version -2 bydefault
 wsl –update
 a􀅌er doing above step extract the doxker file and run the setup
+
+
+🛠️ 1. Check WSL command availability
+Open PowerShell or Command Prompt, and type:
+
+
+wsl
+If it says “command not found”, then WSL isn't installed correctly. Fix it by running:
+
+
+wsl --install
+This command installs WSL, sets WSL 2 as default, and installs Ubuntu by default.
+
+After running that, restart your PC.
+
+🛠️ 2. Manually Update the WSL Kernel
+Even if WSL is installed, the kernel update might be missing. Download and install it:
+
+🔗 WSL Kernel Update (Microsoft link)
+
+Run the .msi file, complete the setup, then try:
+
+wsl --set-default-version 2

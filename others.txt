@@ -1,0 +1,3 @@
+If pip is not recognized:
+
+python -m ensurepip --upgrade
