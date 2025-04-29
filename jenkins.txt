@@ -1,0 +1,12 @@
+1] download java:-
+Download link h􀆩ps://www.oracle.com/in/java/technologies/downloads/
+
+Edit User Variable
+Variable name: JAVA_HOME
+Variable value: C:\Program Files\Java\jdk-21
+
+
+Jenkins installion download link:-
+h􀆩ps://www.jenkins.io/download/
+go to
+h􀆩p://localhost:8080

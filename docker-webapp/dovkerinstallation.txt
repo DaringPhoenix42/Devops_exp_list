@@ -1,0 +1,17 @@
+Docker -exp
+Required Links: 1) Docker Home Page - h􀆩ps://www.docker.com/
+2) Docker Windows Download Page - h􀆩ps://www.docker.com/products/docke...
+3) Docker System Requirements - h􀆩ps://docs.docker.com/desktop/insta...
+4) Step by Step Fix Manual - h􀆩ps://learn.microso􀅌.com/en-us/win...
+Sigin your account or create account
+Create account tehn download the files required
+
+Checking wsl is enable or not :-
+1]Go to turn windows features on and off
+Check windows hyper visier pla􀆞orm
+Windows subsystem for linux on that
+
+
+C:\Users\hp>wsl –status version -2 bydefault
+wsl –update
+a􀅌er doing above step extract the doxker file and run the setup

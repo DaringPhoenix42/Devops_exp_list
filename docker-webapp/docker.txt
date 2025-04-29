@@ -1,0 +1,37 @@
+command line :-commands 
+
+cd "D:\Git Repos\devops_practical_exp\Git commands\docker-webapp"
+
+docker build -t daringdhruvtiwari/php-docker-app .
+
+docker run -d -p 8081:80 daringdhruvtiwari/php-docker-app
+
+docker push daringdhruvtiwari/php-docker-app:latest
+
+command line:-
+1. Open terminal and go to the folder
+
+cd path/to/php-docker-app
+
+2. Build the Docker image
+
+docker build -t daringdhruvtiwari/php-docker-app .
+
+3. Run the Docker container locally
+
+docker run -d -p 8080:80 daringdhruvtiwari/php-docker-app
+
+📍 Open your browser and go to: http://localhost:8080
+4. Login to Docker Hub
+
+docker login
+
+Enter your Docker Hub username (daringdhruvtiwari) and password.
+5. Push the image to Docker Hub
+
+docker push daringdhruvtiwari/php-docker-app
+
+✅ Done!
+
+Now your image is public at:
+📦 https://hub.docker.com/r/daringdhruvtiwari/php-docker-app
