@@ -1,0 +1,36 @@
+script pipline:-
+pipeline {
+    agent any
+
+    stages {
+        stage('Clone Repository') {
+            steps {
+                git url: 'https://github.com/DaringPhoenix42/Devops_exp_list', branch: 'main'
+            }
+        }
+
+        stage('Deploy to XAMPP') {
+            steps {
+                bat '''
+                xcopy "commands exp\\*.html" "C:\\xampp\\htdocs\\myweb" /Y /I
+                '''
+            }
+        }
+    }
+}
+
+run the script:-
+Go to your browser and open:
+
+http://localhost/myweb/index.html
+
+copy the code to this :-
+Set Up Deployment Folder
+
+    Go to: C:\xampp\htdocs
+
+    Create a new folder named:
+
+    myweb
+
+This is where Jenkins will copy your about.html, contact.html, and index.html

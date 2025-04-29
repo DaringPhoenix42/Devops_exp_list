@@ -1,0 +1,72 @@
+java code :-
+public class Addition {
+    public static void main(String[] args) {
+        int a = 10, b = 20;
+        int sum = a + b;
+        System.out.println("Sum of " + a + " and " + b + " is: " + sum);
+    }
+}
+
+
+steps to run jenkins:-
+1}Create a Jenkins Freestyle Project :-
+Click "New Item"
+
+Enter a name like Java-Addition-Build
+
+Choose Freestyle project and click OK
+
+
+2. Configure the Jenkins Job
+A. Source Code Management
+
+    Select Git
+
+    In Repository URL, paste:
+
+https://github.com/DaringPhoenix42/Devops_exp_list.git
+
+Credentials: Leave empty if public repo
+
+Branch to build: */main (or use */master if that's your branch)
+
+
+C. Build Steps
+
+    Click Add build step → Execute shell (Linux/macOS)
+    or
+    Execute Windows batch command (Windows)
+
+If using Windows, use:
+cd java program
+javac Addition.java
+java Addition
+
+4. Save and Run
+
+    Click Save
+
+    Click Build Now
+
+    Click the build number (#1, #2, etc.) → Console Output to see result
+
+
+
+
+
+build trigger:-
+🕒 Step-by-Step: Run Jenkins Job Every 2 Minutes
+
+    Go to your Jenkins Dashboard
+
+    Click on your Job (e.g., Java-Addition-Build)
+
+    Click Configure
+
+    Scroll to Build Triggers
+
+    Check Build periodically (or Poll SCM if you're checking Git changes too)
+
+    In the Schedule box, paste this:
+
+H/2 * * * *

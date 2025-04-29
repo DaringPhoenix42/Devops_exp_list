@@ -1,0 +1,27 @@
+Declarative Pipeline script::-
+pipeline {
+    agent any
+
+    stages {
+        stage('Clone Repository') {
+            steps {
+                git url: 'https://github.com/DaringPhoenix42/Devops_exp_list', branch: 'main'
+            }
+        }
+
+        stage('Deploy to XAMPP') {
+            steps {
+                bat '''
+                echo Creating XAMPP folder...
+                mkdir "C:\\xampp\\htdocs\\myweb"
+                
+                echo Deploying HTML files...
+                xcopy "commands exp\\*.html" "C:\\xampp\\htdocs\\myweb" /Y /I /S /E
+                '''
+            }
+        }
+    }
+}
+
+
+run this:-http://localhost/myweb/index.html
